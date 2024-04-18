@@ -1,0 +1,20 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Beluga",
+	"patterns": [
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.bel",
+					"match": "(%).*$\\n?"
+				}
+			]
+		}
+	},
+	"scopeName": "source.bel"
+}
