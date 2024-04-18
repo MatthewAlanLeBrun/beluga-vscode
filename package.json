@@ -1,0 +1,26 @@
+{
+    "name": "beluga",
+    "displayName": "beluga",
+    "description": "Language support for the beluga language",
+    "version": "0.0.1",
+    "engines": {
+      "vscode": "^1.74.0"
+    },
+    "categories": [
+      "Programming Languages"
+    ],
+    "contributes": {
+      "languages": [{
+        "id": "beluga",
+        "aliases": ["Beluga", "beluga", "beluga-lang"],
+        "extensions": [".bel"],
+        "configuration": "./language-configuration.json"
+      }],
+      "grammars": [{
+        "language": "beluga",
+        "scopeName": "source.bel",
+        "path": "./bel.tmLanguage.json"
+      }]
+    }
+  }
+  
