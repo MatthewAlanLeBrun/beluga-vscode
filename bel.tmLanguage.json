@@ -48,7 +48,7 @@
 				},
 				{
 					"name": "entity.name.type.greeks.bel",
-					"match": "[ΓΔ∆ΘΛΞΠΣΦΨΩαβγδεζηθικλμνξοπρστυφχψω]"
+					"match": "[ΓΔ∆ΘΛΞΠΣΦΨΩαβγδεζηθικλμνξοπρστυφχψω](')*"
 				},
 				{
 					"name": "entity.name.tag.label.bel",
