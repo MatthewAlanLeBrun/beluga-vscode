@@ -4,6 +4,18 @@
 	"patterns": [
 		{
 			"include": "#comment"
+		},
+		{
+			"include": "#keyword"
+		},
+		{
+			"include": "#punctuation"
+		},
+		{
+			"include": "#entity"
+		},
+		{
+			"include": "#hole"
 		}
 	],
 	"repository": {
@@ -17,6 +29,62 @@
 				{
 					"name": "comment.line.bel",
 					"match": "(%).*$"
+				}
+			]
+		},
+		"punctuation": {
+			"patterns": [
+				{
+					"name": "punctuation.separator.function-return.bel",
+					"match": "\\-\\>|\\<\\-|→|←|\\=\\="
+				}
+			]
+		},
+		"entity": {
+			"patterns": [
+				{
+					"name": "entity.name.type.variant.bel",
+					"match": "(\\b[A-Z][a-zA-Z0-9'_]*)"
+				},
+				{
+					"name": "entity.name.type.greeks.bel",
+					"match": "[ΓΔ∆ΘΛΞΠΣΦΨΩαβγδεζηθικλμνξοπρστυφχψω]"
+				},
+				{
+					"name": "entity.name.tag.label.bel",
+					"match": "(?<=\\bLF\\s)[a-z][a-z0-9'_]*(:)?"
+				},
+				{
+					"name": "entity.name.tag.constructor.bel",
+					"match": "(?<=\\|\\s)[a-z][a-z0-9'_]*(:)?"
+				}
+			]
+		},
+		"keyword": {
+			"patterns": [
+				{
+					"name": "keyword.operator.infix.bel",
+					"match": "[/=<>@^+\\-*$%|\\[\\]{}:][|!$%&*+./:<=>?@^~-]*"
+				},
+				{
+					"name": "keyword.control.bel",
+					"match": "\\b(LF|and|as|block|Bool|case|coinductive|ctype|end|ffalse|fn|FN|impossible|in|include|inductive|let|mlam|module|new|of|schema|some|stratified|struct|ttrue|typedef)\\b"
+				},
+				{
+					"name": "keyword.harpoon.bel",
+					"match": "\\b(by|total|intros|unboxed|proof|split|solve)\\b"
+				},
+				{
+					"name": "storage.type.bel",
+					"match": "(\\b(type|rec)\\b)"
+				}
+			]
+		},
+		"hole": {
+			"patterns": [
+				{
+					"name": "markup.bold.hole.bel",
+					"match": "\\?"
 				}
 			]
 		}
