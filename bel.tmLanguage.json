@@ -10,8 +10,13 @@
 		"comment": {
 			"patterns": [
 				{
+					"name": "comment.block.bel",
+					"begin": "%{",
+					"end": "}%"
+				},
+				{
 					"name": "comment.line.bel",
-					"match": "(%).*$\\n?"
+					"match": "(%).*$"
 				}
 			]
 		}
